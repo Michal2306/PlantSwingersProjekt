@@ -1,10 +1,10 @@
-package org.planing.sbshoppongcart;
+package org.plantswingers;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SbHibernateShoppingCartApplicationTests {
+class PlantSwingersAppTests {
 
 	@Test
 	void contextLoads() {
