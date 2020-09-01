@@ -11,8 +11,7 @@
       <th:block th:include="/_menu"></th:block>
        
       <div class="page-title">Lista Produktow</div>
-
-      
+       
       <div class="product-preview-container" th:each="prodInfo : ${paginationProducts.list}">
          <ul>
             <li><img class="product-image"
@@ -31,9 +30,7 @@
                </li>
             </th:block>
          </ul>
-		
-	</div>
-	
+      </div>
        
       <br/>
       <div class="page-navigator" th:if="${paginationProducts.totalPages > 1}">
@@ -58,19 +55,11 @@
 		max-height: 100px;
 	}
 	
-	<!--.kontener2{
-		margin-left: 100px;
-		margin-right: 100px;
+	product-preview-container{
 		display: grid;
-  		grid-template-columns: 25% auto;
-	}-->
-	
-	<!--.product-preview-container{
-		display: grid;
-		grid-tempalte-column: 25% auto;
+		grid-tempalte-column: 25% 25% 25% 25%;
 		
-	}-->
-	
+	}
 	
 	
 </style>

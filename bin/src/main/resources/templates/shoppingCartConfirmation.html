@@ -20,8 +20,8 @@
          </ul>
          <h3>Zakup:</h3>
          <ul>
-            <li>Ilość: <span th:utext="${myCart.quantityTotal}"></span></li>
-            <li>Suma:
+            <li>Quantity: <span th:utext="${myCart.quantityTotal}"></span></li>
+            <li>Total:
                <span class="total"
                   th:utext="${#numbers.formatDecimal(myCart.amountTotal,3,2,'COMMA')}">  
                </span>PLN
@@ -45,7 +45,7 @@
             <ul>
                <li>
                   <img class="product-image"
-                        th:src="@{|/productImage?code=${cartLineInfo.productInfo.code}|}" />
+                     src="@{|/productImage?code=${cartLineInfo.productInfo.code}|}" />
                </li>
                <li>
                   Kod: <span th:utext="${cartLineInfo.productInfo.code}"></span>
@@ -56,13 +56,13 @@
                <li>Cena:
                   <span class="price"
                      th:utext="${#numbers.formatDecimal(cartLineInfo.productInfo.price,3,2,'COMMA')}">
-                  </span> PLN
+                  </span>PLN
                </li>
                <li>Ilosc: <span th:utext="${cartLineInfo.quantity}"></span></li>
                <li>Cena:
                   <span class="subtotal"
                      th:utext="${#numbers.formatDecimal(cartLineInfo.amount,3,2,'COMMA')}">
-                  </span> PLN
+                  </span>
                </li>
             </ul>
          </div>
@@ -71,11 +71,4 @@
       <th:block th:include="/_footer"></th:block>
        
    </body>
-
-<style>
-	img{
-		width:200px;
-		height:200px;
-	}
-</style>
 </html>

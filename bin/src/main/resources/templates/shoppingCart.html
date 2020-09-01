@@ -30,7 +30,7 @@
                            th:value="${cartLineInfo.productInfo.code}" />
                      </li>
                      <li>Nazwa: <span th:utext="${cartLineInfo.productInfo.name}"></span></li>
-                     <li>Cena za sztuke:
+                     <li>Price:
                         <span class="price"
                            th:utext="${#numbers.formatDecimal(cartLineInfo.productInfo.price,3,2,'COMMA')}">
                         </span>

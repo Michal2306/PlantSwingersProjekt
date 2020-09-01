@@ -47,6 +47,13 @@
                </td>
             </tr>
             <tr>
+               <td>Zdjecie</td>
+               <td>
+                  <img th:src="@{|/productImage?code=${productForm.code}|}" width="100"/>
+               </td>
+               <td> </td>
+            </tr>
+            <tr>
                <td>Dodaj zdjecie</td>
                <td><input type="file" th:field="*{fileData}" /></td>
                <td> </td>
