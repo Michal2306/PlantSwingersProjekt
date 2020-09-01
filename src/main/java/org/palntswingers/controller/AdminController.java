@@ -53,7 +53,6 @@ public class AdminController {
       }
    }
  
-   // GET: Show Login Page
    @RequestMapping(value = { "/admin/login" }, method = RequestMethod.GET)
    public String login(Model model) {
  
@@ -90,7 +89,7 @@ public class AdminController {
       return "orderList";
    }
  
-   // GET: Show product.
+ 
    @RequestMapping(value = { "/admin/product" }, method = RequestMethod.GET)
    public String product(Model model, @RequestParam(value = "code", defaultValue = "") String code) {
       ProductForm productForm = null;
@@ -109,7 +108,7 @@ public class AdminController {
       return "product";
    }
  
-   // POST: Save product
+   
    @RequestMapping(value = { "/admin/product" }, method = RequestMethod.POST)
    public String productSave(Model model, //
          @ModelAttribute("productForm") @Validated ProductForm productForm, //
@@ -125,7 +124,7 @@ public class AdminController {
          Throwable rootCause = ExceptionUtils.getRootCause(e);
          String message = rootCause.getMessage();
          model.addAttribute("errorMessage", message);
-         // Show product form.
+         
          return "product";
       }
  

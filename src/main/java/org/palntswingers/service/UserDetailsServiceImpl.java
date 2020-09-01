@@ -30,12 +30,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                     + username + " was not found in the database");
         }
  
-        // EMPLOYEE,MANAGER,..
+        
         String role = account.getUserRole();
  
         List<GrantedAuthority> grantList = new ArrayList<GrantedAuthority>();
  
-        // ROLE_EMPLOYEE, ROLE_MANAGER
+        
         GrantedAuthority authority = new SimpleGrantedAuthority(role);
  
         grantList.add(authority);

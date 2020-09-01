@@ -19,7 +19,7 @@
                th:src="@{|/productImage?code=${prodInfo.code}|}" /></li>
             <li>Kod: <span th:utext="${prodInfo.code}"></span></li>
             <li>Nazwa: <span th:utext="${prodInfo.name}"></span></li>
-            <li>Cena: <span th:utext="${#numbers.formatDecimal(prodInfo.price,3,2,'COMMA')}"></span></li>
+            <li>Cena: <span th:utext="${#numbers.formatDecimal(prodInfo.price,3,2,'COMMA')}"></span> PLN</li>
             <li>
                <a th:href="@{|/buyProduct?code=${prodInfo.code}|}">Kup Teraz</a>
             </li>

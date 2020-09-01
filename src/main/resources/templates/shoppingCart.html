@@ -33,7 +33,7 @@
                      <li>Cena za sztuke:
                         <span class="price"
                            th:utext="${#numbers.formatDecimal(cartLineInfo.productInfo.price,3,2,'COMMA')}">
-                        </span>
+                        </span> PLN
                      </li>
                      <li>Ilosc:
                         <input
@@ -43,7 +43,7 @@
                      <li>Cena:
                         <span class="subtotal"
                            th:utext="${#numbers.formatDecimal(cartLineInfo.amount,3,2,'COMMA')}">
-                        </span>
+                        </span> PLN
                      </li>
                      <li>
                         <a th:href="@{|/shoppingCartRemoveProduct?code=${cartLineInfo.productInfo.code}|}">

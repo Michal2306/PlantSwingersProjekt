@@ -79,7 +79,7 @@ public class ProductDAO {
         if (isNew) {
             session.persist(product);
         }
-        // If error in DB, Exceptions will be thrown out immediately
+       
         session.flush();
     }
  
@@ -92,7 +92,7 @@ public class ProductDAO {
             sql += " Where lower(p.name) like :likeName ";
         }
         sql += " order by p.createDate desc ";
-        // 
+      
         Session session = this.sessionFactory.getCurrentSession();
         Query<ProductInfo> query = session.createQuery(sql, ProductInfo.class);
  

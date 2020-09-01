@@ -40,7 +40,6 @@ public class PlantSwingersApp {
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
  
-        // See: application.properties
         dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
         dataSource.setUrl(env.getProperty("spring.datasource.url"));
         dataSource.setUsername(env.getProperty("spring.datasource.username"));
@@ -56,7 +55,6 @@ public class PlantSwingersApp {
     public SessionFactory getSessionFactory(DataSource dataSource) throws Exception {
         Properties properties = new Properties();
  
-        // See: application.properties  
         properties.put("hibernate.dialect", env.getProperty("spring.jpa.properties.hibernate.dialect"));
         properties.put("hibernate.show_sql", env.getProperty("spring.jpa.show-sql"));
         properties.put("current_session_context_class", //
@@ -64,7 +62,6 @@ public class PlantSwingersApp {
  
         LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
  
-        // Package contain entity classes
         factoryBean.setPackagesToScan(new String[] { "" });
         factoryBean.setDataSource(dataSource);
         factoryBean.setHibernateProperties(properties);
